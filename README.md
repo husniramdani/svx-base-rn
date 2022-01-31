@@ -1,6 +1,6 @@
-# SVX-BaseRN22
+# SVX-BaseRN
 
-SVX mean starter-version-x => Base RN (React Native 2022)
+SVX mean starter-version-x => Base RN (React Native)
 
 list package :
 - react: 17.0.2
