@@ -1,14 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import Svg from '@components/Svg';
+import { p, c } from '@utils/StyleHelper';
 
 export default function Splash() {
-  // setTimeout(() => {
-  //   this.props.navigation.navigate('AuthIndex');
-  // }, 1200);
-
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Splash</Text>
+    <View style={[p.center, c.bgMain, { flex: 1 }]}>
+      <Svg icon="gppal_large" size={150} />
     </View>
   );
 }
