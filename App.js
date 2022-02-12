@@ -1,15 +1,11 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
  * @format
  * @flow strict-local
  */
 
 import * as React from 'react';
-import { View, Text, Button, Image } from 'react-native';
+import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Svg from '@components/Svg';
 
@@ -17,7 +13,6 @@ function HomeScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home!</Text>
-      {/* <Svg height={145} icon="chart" size={xs(260)} /> */}
       <Svg icon="chart"/>
       <Svg icon="chart" fill="#eb4034"/>
     </View>
