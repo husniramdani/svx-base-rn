@@ -4,14 +4,11 @@ import {
 } from 'react-native'
 // navigator
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 // screens
 import SplashScreen from '@screens/Splash';
 import MainScreen from '@screens/Main';
 // utils
 import { main, light } from '@utils/Colors';
-
-const Stack = createStackNavigator();
 
 export default function Router() {
   const [isLoading, setLoading] = useState(false);
