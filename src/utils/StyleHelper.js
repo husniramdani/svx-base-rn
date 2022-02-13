@@ -126,6 +126,9 @@ export const c = StyleSheet.create({
   bgMain: {
     backgroundColor: main
   },
+  bgGrey: {
+    backgroundColor: grey
+  },
 })
 
 // font Helper
@@ -193,13 +196,17 @@ const loopStyle = (key, value) => ({
   [key + 5]: {
     [value]: xs(25)
   },
-  [key + 16]: {
-    [value]: xs(16)
+  [key + 6]: {
+    [value]: xs(30)
+  },
+  [key + 7]: {
+    [value]: xs(35)
   },
   [key + 8]: {
-    [value]: xs(8)
+    [value]: xs(40)
   },
 })
+
 export const b = StyleSheet.create({
   ...loopStyle('mb', 'marginBottom'),
   ...loopStyle('mt', 'marginTop'),
@@ -257,6 +264,9 @@ export const b = StyleSheet.create({
   shadow: createShadow(2),
   shadowLow: createShadow(1),
   shadowHigh: createShadow(3),
+  shadowHigh2: createShadow(4),
+  shadowHigh3: createShadow(5),
+  shadowHigh4: createShadow(6),
   visible: {
     display: 'flex'
   },

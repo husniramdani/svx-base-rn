@@ -22,10 +22,7 @@ export const btnDanger = {
   color: "#fff"
 };
 
-export const gradientColor = ['#FFFFFF', "#ECE9E6"];
-export const headerGradientColor = ['#ECE9E6', "#BBD2C5"];
-export const qrGradientColor = ['#00C9FF', "#92FE9D"];
-export const buttonGradientColor = ['#20C271', "#20C271"];
+export const mainGradient = ['#FFFFFF', "#DAF5F5"];
 
 export const main = "#10C0BC";
 export const light = "#FFFFFF";

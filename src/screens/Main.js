@@ -1,13 +1,12 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Svg from '@components/Svg';
-import {
-  Button,
-} from 'react-native';
 // Screen
 import MotoGP from './MotoGP';
 import Moto2 from './Moto2';
-
+// components
+import Svg from '@components/Svg';
+import Button from '@components/Button';
+import { b, p, c, f } from '@utils/StyleHelper';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,21 +21,31 @@ export default function MainScreen() {
         name="MotoGP"
         component={MotoGP}
         options={{
+          headerStyle: {
+            height: 100,
+          },
           headerTitleAlign: 'center',
-          headerTitle: () => <Svg icon="gppal_M" size={70} />,
+          headerTitle: () => <Svg icon="gppal_M" size={100} />,
           headerLeft: () => (
             <Button
+              disabled
+              height={40}
+              width={40}
+              style={[b.roundedLow, b.shadowHigh3, b.ml6]}
               onPress={() => alert('This is a button!')}
-              title="Info"
-              color="red"
-            />
+            >
+              <Svg icon="chartX" size={24} />
+            </Button>
           ),
           headerRight: () => (
             <Button
+              height={40}
+              width={40}
+              style={[b.roundedLow, b.shadowHigh3, b.mr6]}
               onPress={() => alert('This is a button!')}
-              title="Info"
-              color="blue"
-            />
+            >
+              <Svg icon="thropy" size={22} />
+            </Button>
           ),
         }}
       />
