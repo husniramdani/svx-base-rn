@@ -13,7 +13,7 @@ export default function MotoGP() {
   return (
     <LinearGradient
       colors={mainGradient}
-      style={s.container}
+      style={[b.container, p.justifyBetween, { paddingTop: 96 }]}
     >
       <Shadow
         distance={30}
@@ -26,7 +26,7 @@ export default function MotoGP() {
           <Svg icon="gppal_M" size={100} />
         </View>
       </Shadow>
-      <View style={[c.bglight, c.bgMain, p.center, { height: ms(60) }]}>
+      <View style={[p.center, { height: ms(60) }]}>
         <Button
           height={40}
           width={40}
@@ -39,7 +39,3 @@ export default function MotoGP() {
     </LinearGradient>
   );
 }
-
-const s = {
-  container: [b.container, p.justifyBetween, { paddingTop: 96 }],
-};

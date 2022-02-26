@@ -11,7 +11,7 @@ import MainScreen from '@screens/Main';
 import { main, light } from '@utils/Colors';
 
 export default function Router() {
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {

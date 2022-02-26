@@ -232,7 +232,17 @@ export const b = StyleSheet.create({
   borderBottom: {
     borderWidth: 1,
     borderColor: "transparent",
-    borderBottomColor: "#dadada"
+    borderBottomColor: main
+  },
+  borderTopMain: {
+    borderWidth: 4,
+    borderColor: "transparent",
+    borderTopColor: main
+  },
+  borderTopGrey: {
+    borderWidth: 4,
+    borderColor: "transparent",
+    borderTopColor: grey
   },
   container: {
     flex: 1
@@ -276,6 +286,9 @@ export const b = StyleSheet.create({
   },
   w50: {
     width: '50%'
+  },
+  w33: {
+    width: '33.33333%'
   },
   w100: {
     width: '100%'
