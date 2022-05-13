@@ -28,3 +28,5 @@ export const main = "#10C0BC";
 export const light = "#FFFFFF";
 export const black = "black";
 export const grey = "grey";
+export const grey50 = "#EEF1F9";
+export const dark = "#554652";

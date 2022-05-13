@@ -1,41 +1,97 @@
 import React from 'react';
-import LinearGradient from 'react-native-linear-gradient';
-import { View, Text } from 'react-native';
-import { Shadow } from 'react-native-shadow-2';
+import { SafeAreaView, View, Text, FlatList, ImageBackground, StyleSheet } from 'react-native';
 // components
 import Svg from '@components/Svg';
 import Button from '@components/Button';
-import { p, c, b } from '@utils/StyleHelper';
+import { p, c, b, f } from '@utils/StyleHelper';
 import { main, mainGradient } from '@utils/Colors';
 import { ms } from '@utils/Responsive'
 
-export default function MotoGP() {
-  return (
-    <LinearGradient
-      colors={mainGradient}
-      style={[b.container, p.justifyBetween, { paddingTop: 96 }]}
-    >
-      <Shadow
-        distance={30}
-        offset={[0, 5]}
-        startColor={"rgba(148, 227, 226, 0.4)"}
-        containerViewStyle={[b.mx8]}
-        viewStyle={[{ alignSelf: 'stretch' }]}
-      >
-        <View style={[p.center, c.bgLight, b.rounded, { height: ms(560), overflow: 'hidden' }]}>
-          <Svg icon="gppal_M" size={100} />
-        </View>
-      </Shadow>
-      <View style={[p.center, { height: ms(60) }]}>
-        <Button
-          height={40}
-          width={40}
-          style={[b.roundedLow, b.shadowHigh3, b.mr6]}
-          onPress={() => alert('This is a button!')}
+const DATA = [
+  {
+    id: '0',
+    name: 'Qatar',
+    flag: 'QA',
+  },
+  {
+    id: '1',
+    name: 'Indonesia',
+    flag: 'ID',
+  },
+  {
+    id: '2',
+    name: 'Republica Argentina',
+    flag: 'AR',
+  },
+  {
+    id: '3',
+    name: 'AT',
+    flag: 'AT',
+  },
+  {
+    id: '4',
+    name: 'AU',
+    flag: 'AU',
+  },
+  {
+    id: '5',
+    name: 'DE',
+    flag: 'DE',
+  },
+  {
+    id: '6',
+    name: 'ES',
+    flag: 'ES',
+  },
+  {
+    id: '7',
+    name: 'FI',
+    flag: 'FI',
+  },
+  {
+    id: '8',
+    name: 'FR',
+    flag: 'FR',
+  },
+];
+
+const Item = ({ name, flag }) => (
+  <View style={[b.mx3, b.my2, c.bgGrey50, b.rounded, { overflow: "hidden" }]}>
+    <View style={[p.row]}>
+      <View style={[c.bgDark, b.w40, { height: ms(88) }]}>
+        <ImageBackground
+          source={require('@images/vector-red-1.png')}
+          resizeMode="cover"
+          style={[b.p2, { ...StyleSheet.absoluteFillObject }]}
         >
-          <Svg icon="thropy" size={22} />
-        </Button>
+          <Text style={[f.uppercase, c.light, f.bold, f._14]}>Round</Text>
+          <Text style={[f.uppercase, c.light, f.bold, f._14]}>01 / 22</Text>
+        </ImageBackground>
       </View>
-    </LinearGradient>
+      <View style={[c.bgDark, b.w60, p.center, b.px3]}>
+        <Text style={[f.uppercase, c.light, f.bold, f._18]}>{name}</Text>
+      </View>
+    </View>
+    <View>
+      <Svg icon={flag || "ID"} size={28} />
+
+    </View>
+    <View></View>
+  </View>
+);
+
+export default function MotoGP() {
+  const renderItem = ({ item }) => (
+    <Item name={item.name} flag={item.flag} />
+  );
+
+  return (
+    <SafeAreaView style={[b.container, c.bgLight, b.pt14]}>
+      <FlatList
+        data={DATA}
+        renderItem={renderItem}
+        keyExtractor={item => item.id}
+      />
+    </SafeAreaView>
   );
 }

@@ -6,7 +6,7 @@ import LottieView from 'lottie-react-native';
 
 export default function Splash() {
   return (
-    <View style={[p.center, c.bgGrey, { flex: 1 }]}>
+    <View style={[p.center, c.bgMain, { flex: 1 }]}>
       <LottieView source={require('../assets/animation/splash.json')} autoPlay />
       {/* <Svg icon="gppal_L_white" size={150} /> */}
     </View>

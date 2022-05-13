@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 import { xs, ms } from './Responsive'
 import {
   main, primary, success, warning, danger,
-  light, grey
+  light, grey, grey50, dark,
 } from './Colors'
 
 export const createShadow = (elevation = 3) => {
@@ -129,6 +129,12 @@ export const c = StyleSheet.create({
   bgGrey: {
     backgroundColor: grey
   },
+  bgGrey50: {
+    backgroundColor: grey50
+  },
+  bgDark: {
+    backgroundColor: dark
+  },
 })
 
 // font Helper
@@ -147,6 +153,9 @@ export const f = StyleSheet.create({
   },
   underline: {
     textDecorationLine: 'line-through'
+  },
+  uppercase: {
+    textTransform: 'uppercase'
   },
   ...createFont(8),
   ...createFont(10),
@@ -204,6 +213,21 @@ const loopStyle = (key, value) => ({
   },
   [key + 8]: {
     [value]: xs(40)
+  },
+  [key + 9]: {
+    [value]: xs(45)
+  },
+  [key + 10]: {
+    [value]: xs(50)
+  },
+  [key + 12]: {
+    [value]: xs(60)
+  },
+  [key + 14]: {
+    [value]: xs(70)
+  },
+  [key + 16]: {
+    [value]: xs(80)
   },
 })
 
@@ -289,6 +313,12 @@ export const b = StyleSheet.create({
   },
   w33: {
     width: '33.33333%'
+  },
+  w40: {
+    width: '40%'
+  },
+  w60: {
+    width: '60%'
   },
   w100: {
     width: '100%'

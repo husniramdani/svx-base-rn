@@ -33,25 +33,32 @@ export default function MainScreen() {
           headerTitle: () => <Svg icon="gppal_M" size={100} />,
           headerLeft: () => (
             <Button
-              height={44}
-              style={[b.roundedLow, c.bgGrey50, b.pl6, b.pr2]}
+              disabled
+              height={40}
+              width={40}
+              style={[b.roundedLow, b.shadowHigh3, b.ml6]}
               onPress={() => alert('This is a button!')}
             >
-              <Svg icon="setting" size={24} />
+              <Svg icon="chartX" size={24} />
             </Button>
           ),
           headerRight: () => (
             <Button
-              height={44}
-              style={[b.roundedLow, c.bgGrey50, b.pr6, b.pl2]}
+              height={40}
+              width={40}
+              style={[b.roundedLow, b.shadowHigh3, b.mr6]}
               onPress={() => alert('This is a button!')}
             >
-              <Svg icon="standing" size={24} />
+              <Svg icon="thropy" size={22} />
             </Button>
           ),
         }}
       />
       <Tab.Screen name="Moto3" component={Moto3} />
+      <Tab.Screen name="Moto4" component={Moto3} />
+      <Tab.Screen name="Moto5" component={Moto3} />
+      <Tab.Screen name="Moto6" component={Moto3} />
+      <Tab.Screen name="Moto7" component={Moto3} />
     </Tab.Navigator>
   );
 }
