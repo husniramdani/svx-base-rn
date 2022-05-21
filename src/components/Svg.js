@@ -5,13 +5,16 @@ import { ms } from '@utils/Responsive';
 import GPPAL_M from '@images/gppal-medium.svg';
 import GPPAL_L_WHITE from '@images/gppal-L-white.svg';
 // VECTORS
-import VECTOR_RED_1 from '@images/vector-red-1.png';
+// import VECTOR_RED_1 from '@images/vector-red-1.png';
+// import VECTOR_GRAY_1 from '@images/vector-gray-1.png';
 // ICONS
 import Chart from '@icons/chart.svg';
 import ChartX from '@icons/chart-x.svg';
 import Thropy from '@icons/thropy.svg';
 import Standing from '@icons/standing.svg';
 import Setting from '@icons/setting.svg';
+import Pin from '@icons/pin.svg';
+import Bell from '@icons/bell.svg';
 // FLAGS
 import QA from '@icons/flags/QA.svg';
 import ID from '@icons/flags/ID.svg';
@@ -37,13 +40,16 @@ const Svg = ({ icon, size = 30, fill, opacity, ...props }) => {
     gppal_M: GPPAL_M,
     gppal_L_white: GPPAL_L_WHITE,
     // VECTORS
-    vector_red_1: VECTOR_RED_1,
+    // vector_red_1: VECTOR_RED_1,
+    // vector_gray_1: VECTOR_GRAY_1,
     // ICONS
     chart: Chart,
     chartX: ChartX,
     thropy: Thropy,
     standing: Standing,
     setting: Setting,
+    pin: Pin,
+    bell: Bell,
     // FLAGS
     QA: QA,
     ID: ID,

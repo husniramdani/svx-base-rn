@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 import { xs, ms } from './Responsive'
 import {
   main, primary, success, warning, danger,
-  light, grey, grey50, dark,
+  light, grey, grey50, grey100, grey700, dark,
 } from './Colors'
 
 export const createShadow = (elevation = 3) => {
@@ -115,6 +115,9 @@ export const c = StyleSheet.create({
   grey: {
     color: grey
   },
+  grey700: {
+    color: grey700
+  },
 
   // background
   bgLight: {
@@ -131,6 +134,9 @@ export const c = StyleSheet.create({
   },
   bgGrey50: {
     backgroundColor: grey50
+  },
+  bgGrey100: {
+    backgroundColor: grey100
   },
   bgDark: {
     backgroundColor: dark
@@ -280,6 +286,9 @@ export const b = StyleSheet.create({
   rounded: {
     borderRadius: xs(10)
   },
+  roundedMedium: {
+    borderRadius: xs(15)
+  },
   roundedHigh: {
     borderRadius: xs(20)
   },
@@ -322,6 +331,12 @@ export const b = StyleSheet.create({
   },
   w100: {
     width: '100%'
+  },
+  h50: {
+    height: '50%'
+  },
+  h80: {
+    height: '80%'
   },
   h100: {
     height: '100%'
